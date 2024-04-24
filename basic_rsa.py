@@ -2,7 +2,7 @@ import math
 
 
 def find_coprime(phi):
-    e = 65537  # Common choice for e in RSA for efficiency reasons
+    e = 11  # Common choice for e in RSA for efficiency reasons
     while e < phi:
         if math.gcd(e, phi) == 1:
             return e
@@ -14,9 +14,9 @@ def find_d(e, phi):
 
 # Set p and q
 
-p = 997
+p = 29
 
-q = 797
+q = 13
 
 # Calculate m
 
@@ -36,7 +36,7 @@ print ("d = ", d, ". This is the private key")
 
 
 # Let's encrypt
-M1 = "This is a test!"
+M1 = "This is now an optimized version of the code.... try it out!!!"
 res = []
 for each in M1:
     res.append(ord(each)**e%n)
